@@ -1,0 +1,26 @@
+Lucas Duarte Bareli Ds-13
+
+Fiz com intuito de entregar algo a mais do que proposto pelo instrutor, por isso fui em busca do javafx, onde visualmente pude mostrar a colisão dos trens
+
+Definição de variáveis:
+
+Posições e velocidades dos trens: Variáveis como posicao_inicial_a, posicao_inicial_b, velocidade_a e velocidade_b definem as posições iniciais e as velocidades dos trens.
+Tempo de colisão: A variável tempo calcula o tempo necessário para a colisão.
+Informações de colisão: A variável infoColisao armazena o texto que será mostrado quando ocorrer a colisão.
+Setup inicial dos trens e do painel:
+
+Corpo dos trens: Utilizamos Rectangle para desenhar os corpos dos trens. As cores vermelha e azul são atribuídas ao trem A e ao trem B, respectivamente.
+Rodas dos trens: As rodas dos trens são representadas por Circle. Elas são posicionadas de acordo com o corpo dos trens.
+Texto de colisão: O texto de colisão é exibido na posição (400, 50) na tela e mostra a informação quando os trens se colidem.
+Calculando o tempo e a posição da colisão:
+
+A fórmula usada para calcular o tempo de colisão é: tempo = (posicao_inicial_a - posicao_inicial_b) / (velocidade_b - velocidade_a).
+A posição da colisão é calculada a partir da posição inicial do trem A e da velocidade do trem A.
+Configuração da Timeline e KeyFrame:
+
+Animação dos trens: A animação é criada usando Timeline e KeyFrame. Cada KeyFrame atualiza a posição dos trens e das rodas a cada 0.1 segundo.
+Colisão: Quando a posição do trem A (representada por posA) ultrapassa a posição do trem B (representada por posB), o programa detecta a colisão e altera a cor dos trens e das rodas para verde. A animação é interrompida quando ocorre a colisão (timeline.stop()).
+Configuração da Cena:
+
+A cena (Scene) é configurada com um painel (Pane) que contém todos os elementos gráficos (os trens e o texto da colisão).
+A cena é exibida em uma janela (Stage), e o título da janela é configurado para "Simulação de Colisão de Trens".
